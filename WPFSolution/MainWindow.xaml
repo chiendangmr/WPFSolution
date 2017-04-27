@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFSolution"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="480" Width="640" Background="White">
+
+    <Canvas>
+        <StackPanel x:Name="stack" Orientation="Horizontal" Width="632">
+            <StackPanel.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                            Storyboard.TargetProperty="(Canvas.Left)"
+                            From="630" To="-630" Duration="0:0:5"
+                            FillBehavior="Stop" RepeatBehavior="Forever"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </StackPanel.Triggers>
+            <ContentControl Content="Gaurang00000000000000000000000000000000000000000000000000000000" Margin="4" Width="595"/>
+            <!--<ContentControl Content="Gaurang" Margin="4" Width="60"/>
+            <ContentControl Content="Gaurang" Margin="4" Width="60"/>
+            <ContentControl Content="Gaurang" Margin="4" Width="60"/>
+            <ContentControl Content="Gaurang" Margin="4" Width="60"/>
+            <ContentControl Content="Gaurang" Margin="4" Width="60"/>
+            <ContentControl Content="Gaurang" Margin="4" Width="60"/>
+            <ContentControl Content="Gaurang" Margin="4" Width="60"/>
+            <ContentControl Content="Gaurang" Margin="4" Width="60"/>-->
+        </StackPanel>
+    </Canvas>
 </Window>
